@@ -1,5 +1,5 @@
 # Deployment Links
 
-- Production: https://frontend-3h1jibp17-ashay-amal.vercel.app
+- Production: https://frontend-mu-bice-50.vercel.app
 - GitHub: https://github.com/Ashay-Amal/Job_tracker
-- Updated: 2026-07-06 16:25 UTC
+- Updated: 2026-07-06 16:28 UTC
