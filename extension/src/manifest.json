@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Job Tracker",
+  "description": "Manually save or track job applications from any browser account.",
+  "version": "0.1.0",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Job Tracker"
+  },
+  "permissions": ["storage", "activeTab", "tabs"],
+  "host_permissions": ["http://localhost:8080/*", "https://*/*"],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

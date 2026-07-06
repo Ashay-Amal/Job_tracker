@@ -1,0 +1,98 @@
+:root {
+  color: #172026;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 360px;
+  margin: 0;
+  background: #f6f8f5;
+}
+
+main {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1rem;
+}
+
+header,
+.account-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+header {
+  justify-content: flex-start;
+}
+
+.brand-mark {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 8px;
+  background: #173d35;
+  color: #ffffff;
+  font-weight: 900;
+}
+
+small,
+#message {
+  color: #66756e;
+}
+
+section {
+  display: grid;
+  gap: 0.65rem;
+}
+
+label {
+  display: grid;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid #cbd6d0;
+  border-radius: 8px;
+  padding: 0.58rem 0.65rem;
+  font: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  min-height: 40px;
+  border: 1px solid #173d35;
+  border-radius: 8px;
+  background: #173d35;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+button.secondary {
+  min-height: 32px;
+  border-color: #cbd6d0;
+  background: #ffffff;
+  color: #173d35;
+}
+
+#message {
+  min-height: 1.2rem;
+  margin: 0;
+}

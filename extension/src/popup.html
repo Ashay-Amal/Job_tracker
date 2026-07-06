@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Tracker</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <span class="brand-mark">JT</span>
+        <div>
+          <strong>Job Tracker</strong>
+          <small>Manual capture</small>
+        </div>
+      </header>
+
+      <section id="auth-view">
+        <label>
+          API URL
+          <input id="apiBaseUrl" value="http://localhost:8080" />
+        </label>
+        <label>
+          Email
+          <input id="email" type="email" />
+        </label>
+        <label>
+          Password
+          <input id="password" type="password" />
+        </label>
+        <button id="loginButton">Login</button>
+      </section>
+
+      <section id="capture-view" hidden>
+        <div class="account-row">
+          <span id="accountEmail"></span>
+          <button id="logoutButton" class="secondary">Logout</button>
+        </div>
+        <label>
+          Company
+          <input id="company" />
+        </label>
+        <label>
+          Role
+          <input id="role" />
+        </label>
+        <label>
+          Job link
+          <input id="jobLink" />
+        </label>
+        <label>
+          Status
+          <select id="status">
+            <option value="SAVED">Saved</option>
+            <option value="APPLIED">Applied</option>
+          </select>
+        </label>
+        <label>
+          Skills
+          <input id="skills" placeholder="react, java" />
+        </label>
+        <label>
+          Tags
+          <input id="tags" placeholder="remote, referral" />
+        </label>
+        <label>
+          Description
+          <textarea id="description" rows="5"></textarea>
+        </label>
+        <label>
+          Notes
+          <textarea id="notes" rows="3"></textarea>
+        </label>
+        <button id="saveButton">Save to tracker</button>
+      </section>
+
+      <p id="message" role="status"></p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

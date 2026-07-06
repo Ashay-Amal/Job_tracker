@@ -1,0 +1,57 @@
+server:
+  port: ${PORT:8080}
+
+spring:
+  application:
+    name: job-tracker-api
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/job_tracker}
+    username: ${SPRING_DATASOURCE_USERNAME:job_tracker}
+    password: ${SPRING_DATASOURCE_PASSWORD:job_tracker}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+  mail:
+    host: ${SMTP_HOST:}
+    port: ${SMTP_PORT:587}
+    username: ${SMTP_USERNAME:}
+    password: ${SMTP_PASSWORD:}
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: ${GOOGLE_CLIENT_ID:local-google-client-id}
+            client-secret: ${GOOGLE_CLIENT_SECRET:local-google-client-secret}
+            scope:
+              - openid
+              - profile
+              - email
+
+management:
+  health:
+    mail:
+      enabled: ${MANAGEMENT_HEALTH_MAIL_ENABLED:false}
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+app:
+  frontend-base-url: ${APP_FRONTEND_BASE_URL:http://localhost:5173}
+  ollama-base-url: ${OLLAMA_BASE_URL:}
+  jwt:
+    secret: ${APP_JWT_SECRET:local-development-secret-change-me-please}
+    access-token-minutes: 30
+    refresh-token-days: 30
+  cors:
+    allowed-origins:
+      - http://localhost:5173
+      - http://127.0.0.1:5173
